@@ -5,8 +5,8 @@ int main() {
     double x; cin >> x;
     double sinx = 0; // gia tri cua sin(x)
     
-    long double curx = x;
-    for(int i=1; i<100000; i++) { 
+    long double curx = 1;
+    for(int i=1; i<10000000; i++) { 
         curx = curx * x / i; // x^i / i!
         if(i % 4 == 1) sinx += curx; 
         if(i % 4 == 3) sinx -= curx;

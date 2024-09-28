@@ -32,7 +32,7 @@ public:
             throw "Gio phut khong hop le";
         }
         for(char ch:id) {
-            if((ch < 'A' || ch > 'z') && (ch < '0' || ch > '9')
+            if((ch < 'A' || ch > 'z') && (ch < '0' || ch > '9'))
                 throw "Ma chuyen bay khong hop le";
         }
         for(char ch:date) {
@@ -57,31 +57,47 @@ public:
             throw "Ngay thang nam gio phut khong hop le";
         }
     }
-    string getId() {
+    void Show() {
+        cout << "Ma chuyen bay: " << id << endl;
+        cout << "Noi den: " << dest << " - " << "Noi di: " << depart << endl;
+        cout << "Ngay: " << date << " - " << "Gio: " << time << endl;
+    }
+    string getId() { // de xuat du lieu
         return id;
     }
+    string getDate() { // de xuat du lieu
+        return date;
+    }
 
-    Flight operator>(Flight f) { // overloading operator de su dung ham sort
+    bool operator>(const Flight& f) const {
         if(year == f.year && month == f.month && day == f.day) {
             return hour * 60 + minute > f.hour * 60 + f.minute;
         }
         return year > f.year || (year == f.year && month > f.month) || (year == f.year && month == f.month && day > f.day);
     }
-    bool FindFlight(string s) {
+
+    bool operator<(const Flight& f) const {
+        if(year == f.year && month == f.month && day == f.day) {
+            return hour * 60 + minute < f.hour * 60 + f.minute;
+        }
+        return year < f.year || (year == f.year && month < f.month) || (year == f.year && month == f.month && day < f.day);
+    }
+    bool FindFlight(string s) { // tim chuyen bay theo ma chuyen bay, noi den hoac noi di
         return s == id || s == dest || s == depart;
     }
-    bool FromAndDate(string from, string datee) {
+    bool FromAndDate(string from, string datee) { // tim chuyen bay di tu noi di va ngay khoi hanh
         return from == depart && datee == date;
     }
-    bool FlightTo(string from, string to) {
+    bool FlightTo(string from, string to) { // tim chuyen bay di tu noi di den noi den
         return to == dest && from == depart;
     }
 };
+
 Flight Nhap() {
     string id, dest, depart, date, time;
     cout << "Nhap ma chuyen bay: "; cin >> id;
     cout << "Nhap noi den: "; cin.ignore(); getline(cin, dest);
-    cout << "Nhap noi di: "; cin.ignore(); getline(cin, depart);
+    cout << "Nhap noi di: "; getline(cin, depart);
     cout << "Nhap ngay: "; cin >> date;
     cout << "Nhap gio: "; cin >> time;
     return Flight(id, dest, depart, date, time);
@@ -92,30 +108,45 @@ void FindByIdDestDepart(vector<Flight> flights) {
     bool isFound = false;
     for(Flight f:flights) {
         if(f.FindFlight(s)) {
-            cout << f.getId() << endl;
+            f.Show();
             isFound = true;
         }
     }
     if(!isFound) {
-        cout << "Khong tim thay chuyen bay hop le " << s << endl;
+        cout << "Khong tim thay chuyen bay hop le " << endl;
+    }
 }
 void FindByFromAndDate(vector<Flight> flights) {
     cout << "Tim chuyen bay di tu noi di va ngay khoi hanh\n";
     string datee, from;
-    cout << "Nhap noi di: "; cin.ignore(); getline(cin, from);
+    cout << "Nhap noi di: "; getline(cin, from);
     cout << "Nhap ngay: "; cin >> datee;
     cout << "Danh sach chuyen bay co noi di la " << from << " va ngay la " << datee << endl;
+    bool isFound = false;
     for(Flight f:flights) {
-        if(f.FromAndDate(from, datee)) cout << f.getId() << endl;
+        if(f.FromAndDate(from, datee)) {
+            f.Show();
+            isFound = true;
+        }
+    }
+    if(!isFound) {
+        cout << "Khong tim thay chuyen bay hop le " << endl;
     }
 }
 void FindByFlightTo(vector<Flight> flights) {
     cout << "Tim chuyen bay di tu noi di den noi den\n";
     string from, to;
     cout << "Nhap noi di: "; cin.ignore(); getline(cin, from);
-    cout << "Nhap noi den: "; cin.ignore(); getline(cin, to);
+    cout << "Nhap noi den: "; getline(cin, to);
+    bool isFound = false;
     for(Flight f:flights) {
-        if(f.FlightTo(from, to)) cout << f.getId() << endl;
+        if(f.FlightTo(from, to)) {
+            f.Show();
+            isFound = true;
+        }
+    }
+    if(!isFound) {
+        cout << "Khong tim thay chuyen bay hop le " << endl;
     }
 }
 int main() {
@@ -128,11 +159,10 @@ int main() {
     }
     sort(flights.begin(), flights.end());
     cout << "Danh sach ma chuyen bay sap xep theo gio khoi hanh: " << endl;
-    for(Flight f:flights) cout << f.getId() << endl;
+    for(Flight f:flights) cout << f.getId() << ": " << f.getDate() << endl;
 
     FindByIdDestDepart(flights);
     FindByFromAndDate(flights);
     FindByFlightTo(flights);
-    // Bai dai qua thay oi
     return 0;
 }

@@ -6,10 +6,10 @@ private:
     string maSo, loaiTK, name, CMND, dateOpen;
     int dayOpen, monthOpen, yearOpen;
     int dayInMonth[13] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-    double money;
+    double money, laiSuat = 0.1;
 public:
     SoTietKiem(string maSo, string loaiTK, string name, string CMND, string dateOpen, double money): maSo(maSo), loaiTK(loaiTK), name(name), CMND(CMND), dateOpen(dateOpen), money(money) {
-        if(maSo.size() > 5 || loaiTK.size() > 10 || name.size() > 30 || (CMND.size() != 9 && CMND.size() != 12) || dateOpen.size() > 10) {
+        if(maSo.size() != 5 || name.size() > 30 || (CMND.size() != 9 && CMND.size() != 12) || dateOpen.size() != 10) {
             throw "Do dai Input khong hop le";
             return;
         }
@@ -33,8 +33,14 @@ public:
             throw "Ngay thang nam khong hop le";
             return;
         }
+
+        int yearPast = 2024 - yearOpen;
+        if(loaiTK == "Ky han") this->money = money * pow(1 + laiSuat, yearPast); // Update so tien sau yearPast nam
     }
 
+    void UpdateMoney() { // Cap nhat so tien sau 1 nam
+        if(loaiTK == "Ky han") money += money * laiSuat;
+    }
     void Show() {   // Show ra thong tin so tiet kiem
         cout << "Ma so: " << maSo << endl;
         cout << "Loai tiet kiem: " << loaiTK << endl;
@@ -44,7 +50,7 @@ public:
         cout << "So tien: " << money << endl;
         cout << endl;
     }
-    void ShowIdentify { // Ho tro viec in ra thong tin tim kiem
+    void ShowIdentify() { // Ho tro viec in ra thong tin tim kiem
         cout << "Ma so: " << maSo << endl;
         cout << "CMND: " << CMND << endl;
         cout << endl;
@@ -65,6 +71,9 @@ public:
             return;
         }
         this->money -= money;
+    }
+    void GuiTien(double money) { // Gui tien
+        this->money += money;
     }
     bool FindByCMND_or_Maso(string s) { // Tim STK bang CMND hoac ma so
         if(s == maSo || s == CMND) return true;
@@ -98,7 +107,7 @@ SoTietKiem Nhap() {
     double money = 0;
     cout << "Nhap ma so: "; cin >> maSo;
     cout << "Nhap loai tiet kiem: "; cin.ignore(); getline(cin, loaiTK);
-    cout << "Nhap ten: "; cin.ignore(); getline(cin, name);
+    cout << "Nhap ten: "; getline(cin, name);
     cout << "Nhap CMND: "; cin >> CMND;
     cout << "Nhap ngay mo so: "; cin >> dateOpen;
     cout << "Nhap so tien: ";
@@ -132,15 +141,4 @@ int main(){
     sort(stk.begin(), stk.end(), SoTietKiem::OrderByDate);
     cout << "STK sap xep theo ngay mo so tang dan: \n";
     for(auto p:stk) p.ShowDate();
-}
-
-class PhanSo {
-private:
-    int tu, mau;
-public:
-    RutGon() {
-        int a = __gcd(tu, mau);
-        tu /= a;
-        mau /= a;
-    }
 }

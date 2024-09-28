@@ -35,7 +35,6 @@ public:
         if(l == 0) return hashA[r];
         return (hashA[r] - hashA[l-1] * pw(base, r-l+1, Mod) + Mod * Mod) % Mod;
     }
-    ll FFT
 };
 int main() {
     int na, nb; cin >> na >> nb;

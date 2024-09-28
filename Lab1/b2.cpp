@@ -19,7 +19,7 @@ int main() {
         cout << "Phan so a lon hon phan so b";
     }
     else {
-        if(val(b) < val(a)) {
+        if(val(b) > val(a)) {
             cout << "Phan so a nho hon phan so b";
         }
         else {

@@ -58,9 +58,9 @@ public:
 
     void Show() {
         cout << "Ten hoc sinh: " << name << endl;
-        cout << "Diem toan: " << mathPoint << endl;
-        cout << "Diem van: " << literaturePoint << endl;
-        cout << "Diem anh: " << EnglishPoint << endl;
+        cout << "Diem toan: " << mathPoint 
+             << " Diem van: " << literaturePoint 
+             << " Diem anh: " << EnglishPoint << endl;
         cout << "Diem trung binh: " << averagePoint << endl;
         cout << "Phan loai: " << classify << endl;
     }
@@ -69,9 +69,7 @@ Student Nhap() {
     string name;
     double mathPoint, literaturePoint, EnglishPoint;
     cout << "Nhap ten hoc sinh: "; cin.ignore(); getline(cin, name); 
-    cout << "Nhap diem toan: "; cin >> mathPoint;
-    cout << "Nhap diem van: "; cin >> literaturePoint;
-    cout << "Nhap diem anh: "; cin >> EnglishPoint;
+    cout << "Nhap diem toan, van, anh: "; cin >> mathPoint >> literaturePoint >> EnglishPoint;
     return Student(name, mathPoint, literaturePoint, EnglishPoint);
 }
 int main() {
