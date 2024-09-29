@@ -68,7 +68,7 @@ public:
 Student Nhap() {
     string name;
     double mathPoint, literaturePoint, EnglishPoint;
-    cout << "Nhap ten hoc sinh: "; cin.ignore(); getline(cin, name); 
+    cout << "Nhap ten hoc sinh: "; getline(cin, name); 
     cout << "Nhap diem toan, van, anh: "; cin >> mathPoint >> literaturePoint >> EnglishPoint;
     return Student(name, mathPoint, literaturePoint, EnglishPoint);
 }
