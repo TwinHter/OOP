@@ -38,25 +38,25 @@ void TamGiac::TinhTien(float x, float y) {
 }
 void TamGiac::Quay(float goc) {
     float rad = goc*M_PI/180; // chuyen sang radian
-    float xA = A.GetHoanhDo(), yA = A.GetTungDo();
-    float xB = B.GetHoanhDo(), yB = B.GetTungDo();
-    float xC = C.GetHoanhDo(), yC = C.GetTungDo();
+    float xA = A.iHoanh, yA = A.iTung;
+    float xB = B.iHoanh, yB = B.iTung;
+    float xC = C.iHoanh, yC = C.iTung;
     // xoay
-    A.SetHoanhDo(xA * cos(rad) - yA * sin(rad));
-    A.SetTungDo(xA * sin(rad) + yA * cos(rad));
-    B.SetHoanhDo(xB * cos(rad) - yB * sin(rad));
-    B.SetTungDo(xB * sin(rad) + yB * cos(rad));
-    C.SetHoanhDo(xC * cos(rad) - yC * sin(rad));
-    C.SetTungDo(xC * sin(rad) + yC * cos(rad));
+    A.iHoanh = xA * cos(rad) - yA * sin(rad);
+    A.iTung = xA * sin(rad) + yA * cos(rad);
+    B.iHoanh = xB * cos(rad) - yB * sin(rad);
+    B.iTung = xB * sin(rad) + yB * cos(rad);
+    C.iHoanh = xC * cos(rad) - yC * sin(rad);
+    C.iTung = xC * sin(rad) + yC * cos(rad);
 }
 void TamGiac::PhongTo(float k) {
     // Tang cac hoanh do va tung do moi diem len k lan
-    A.SetHoanhDo(A.GetHoanhDo()*k);
-    A.SetTungDo(A.GetTungDo()*k);
-    B.SetHoanhDo(B.GetHoanhDo()*k);
-    B.SetTungDo(B.GetTungDo()*k);
-    C.SetHoanhDo(C.GetHoanhDo()*k);
-    C.SetTungDo(C.GetTungDo()*k);
+    A.iHoanh = A.iHoanh*k;
+    A.iTung = A.iTung*k;
+    B.iHoanh = B.iHoanh*k;
+    B.iTung = B.iTung*k;
+    C.iHoanh = C.iHoanh*k;
+    C.iTung = C.iTung*k;
 }
 void TamGiac::ThuNho(float k) {
     PhongTo(1/k); // Phong To 1/k lan

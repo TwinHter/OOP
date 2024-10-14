@@ -9,11 +9,11 @@ int main() {
     cout << "Nhap du lieu cho tam giac T1." ;
     T1.Nhap();
 
-    cout << "Tam giac T1: "; T1.Xuat();
+    cout << "Tam giac T1: " << endl; T1.Xuat();
     cout << endl;
-    cout << "Tam giac T2: "; T2.Xuat();
+    cout << "Tam giac T2: " << endl; T2.Xuat();
     cout << endl;
-    cout << "Tam giac T3: "; T3.Xuat();
+    cout << "Tam giac T3: " << endl; T3.Xuat();
     cout << endl;
 
     cout << "Tinh tien len 2:"; T1.TinhTien(2, 2); 
