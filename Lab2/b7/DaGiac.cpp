@@ -23,10 +23,9 @@ DaGiac::DaGiac(const DaGiac& x) {
     }
 }
 void DaGiac::Nhap() {
-    cout << "Nhap so dinh: "; cin >> n;
+    cin >> n;
     Dinh = new Diem[n];
     for(int i = 0; i < n; i++) {
-        cout << "Nhap dinh thu " << i + 1 << ".";
         Dinh[i].Nhap();
     }
 }

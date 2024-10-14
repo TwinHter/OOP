@@ -11,16 +11,17 @@ List::List(const List& lst) {
     this->elements = lst.elements;
 }
 void List::Xuat() {
+    cout << "[";
     for (int i = 0; i < n; i++) {
-        cout << elements[i] << " ";
+        cout << elements[i];
+        if(i != n - 1) cout << ",";
     }
+    cout << "]";
     cout << endl;
 }
 void List::Nhap() {
-    cout << "Nhap so phan tu: ";
     cin >> n;
     elements.resize(n);
-    cout << "Nhap cac phan tu: ";
     for (int i = 0; i < n; i++) {
         cin >> elements[i];
     }

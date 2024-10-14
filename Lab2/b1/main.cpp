@@ -18,6 +18,6 @@ int main() {
     cout << "Tung do cua A: " << A.GetTungDo() << endl;
     // Tinh tien diem A len (+2, +2)
     A.TinhTien(2, 2);
-    A.Xuat();    
+    cout << "Sau khi tinh tien A len (2, 2):"; A.Xuat();    
     return 0;
 }

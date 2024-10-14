@@ -3,15 +3,12 @@
 using namespace std;
 int main() {
     Diem d;
-    cout << "Nhap toa do cua diem: " << endl;
     d.Nhap();
 
-    int n;
-    cout << "Nhap so luong chi thi: "; cin >> n;
+    int n; cin >> n;
 
     // Xử lý n chỉ thị
     for (int i = 0; i < n; i++) {
-        cout << "Nhap chi thi: ";
         int x; cin >> x;
 
         switch (x)
@@ -24,7 +21,7 @@ int main() {
             break;
         case 3:
             int k; float x;
-            cout << "Nhap k va x:"; cin >> k >> x;
+            cin >> k >> x;
             d.TinhTien(k, x);
             break;
         default:
@@ -33,7 +30,6 @@ int main() {
     }
 
     // Xuất thông tin điểm sau khi thực hiện các chỉ thị
-    cout << "Toa do diem cuoi cung: ";
     d.Xuat();
 
     return 0;

@@ -15,10 +15,10 @@ Diem::Diem(const Diem&x) {
     this->iTung = x.iTung;
 };
 void Diem::Xuat() {
-    cout << "Toa do diem: (" << iHoanh << "," << iTung << ")" << endl;
+    cout << "(" << iHoanh << "," << iTung << ")" << endl;
 }
 void Diem::Nhap() {
-    cout << "Nhap hoanh do va tung do: " ; cin >> iHoanh >> iTung;
+    cin >> iHoanh >> iTung;
 }
 float Diem::GetTungDo() {
     return iTung;

@@ -15,7 +15,7 @@ Diem::Diem(const Diem&x) {
     this->iTung = x.iTung;
 };
 void Diem::Xuat() {
-    cout << "Toa do diem: (" << iHoanh << "," << iTung << ")" << endl;
+    cout << "(" << iHoanh << "," << iTung << ")" << endl;
 }
 void Diem::Nhap() {
     cin >> iHoanh >> iTung;
