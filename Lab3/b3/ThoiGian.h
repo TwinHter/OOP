@@ -10,8 +10,8 @@ private:
 public:
     ThoiGian();
     ThoiGian(int, int, int);
-    int TinhGiay() const;
-    static ThoiGian TinhLaiGio(int giay) 
+    int TinhGiay() const; // Tính số giây tương ứng với thời gian
+    static ThoiGian TinhLaiGio(int giay)  // Tính thời gian tương ứng với số giây
     {
         ThoiGian ans;
         ans.iGio = giay / 3600;
@@ -19,19 +19,19 @@ public:
         ans.iGiay = giay % 60;
         return ans;
     }
-    ThoiGian operator+(const int&) const;
-    ThoiGian operator-(const int&) const;
-    ThoiGian operator+(const ThoiGian&) const;
-    ThoiGian operator-(const ThoiGian&) const;
-    ThoiGian& operator++(int);
-    ThoiGian& operator--(int);
-    bool operator==(const ThoiGian&) const;
-    bool operator!=(const ThoiGian&) const;
-    bool operator>(const ThoiGian&) const;
-    bool operator<(const ThoiGian&) const;
-    bool operator>=(const ThoiGian&) const;
-    bool operator<=(const ThoiGian&) const;
-    friend std::istream& operator>>(std::istream&, ThoiGian&);
-    friend std::ostream& operator<<(std::ostream&, const ThoiGian&);
+    ThoiGian operator+(const int&) const; // Cộng thời gian với số giây
+    ThoiGian operator-(const int&) const; // Trừ thời gian với số giây
+    ThoiGian operator+(const ThoiGian&) const; // Cộng 2 thời gian
+    ThoiGian operator-(const ThoiGian&) const; // Trừ 2 thời gian
+    ThoiGian& operator++(int); // Tăng thời gian 1 giây
+    ThoiGian& operator--(int); // Giảm thời gian 1 giây
+    bool operator==(const ThoiGian&) const; // So sánh bằng
+    bool operator!=(const ThoiGian&) const; // So sánh khác nhau
+    bool operator>(const ThoiGian&) const; // So sánh lớn hơn
+    bool operator<(const ThoiGian&) const; // So sánh nhỏ hơn
+    bool operator>=(const ThoiGian&) const; // So sánh lớn hơn hoặc bằng
+    bool operator<=(const ThoiGian&) const; // So sánh nhỏ hơn hoặc bằng
+    friend std::istream& operator>>(std::istream&, ThoiGian&); // Nhập thời gian
+    friend std::ostream& operator<<(std::ostream&, const ThoiGian&); // Xuất thời gian
 };
 #endif

@@ -12,7 +12,8 @@ int main()
     cout << "a + b = " << a + b << endl;   
     cout << "a - b = " << a - b << endl;
     cout << "a * b = " << a * b << endl;
-    cout << "a / b = " << a / b << endl;
+    if(b.IsZero()) cout << "Khong the chia cho 0." << endl;
+    else cout << "a / b = " << a / b << endl;
     cout << "a == b: " << (a == b ? "True" : "False") << endl;
     cout << "a != b: " << (a != b ? "True" : "False") << endl;
     return 0;
