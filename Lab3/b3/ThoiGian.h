@@ -17,6 +17,10 @@ public:
         ans.iGio = giay / 3600;
         ans.iPhut = (giay % 3600) / 60;
         ans.iGiay = giay % 60;
+<<<<<<< HEAD
+=======
+        ans.iGio %= 24;
+>>>>>>> c03f776 (.)
         return ans;
     }
     ThoiGian operator+(const int&) const; // Cộng thời gian với số giây

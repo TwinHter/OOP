@@ -24,5 +24,14 @@ int main()
     cout << "t1 = " << t1 << "| t2 = " << t2 << endl;
     cout << "t1 + " << fGiay << " = " << t1 + fGiay << " | t1 - " << bGiay << " = " << t1 - bGiay << endl;
     cout << "t2 + " << fGiay << " = " << t2 + fGiay << " | t2 - " << bGiay << " = " << t2 - bGiay << endl;
+<<<<<<< HEAD
+=======
+
+    int giay;
+    cout << "Nhap so giay: ";
+    cin >> giay;
+    ThoiGian t = ThoiGian::TinhLaiGio(giay);
+    cout << "Thoi gian tuong ung: " << t << endl;
+>>>>>>> c03f776 (.)
     return 0;
 }
