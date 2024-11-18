@@ -1,5 +1,6 @@
 #include "NhanVien.h"
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 NhanVien::NhanVien()
@@ -23,10 +24,13 @@ void NhanVien::Nhap()
     getline(cin, HoTen);
     cout << "Nhap Luong Co Ban: ";
     cin >> LuongCoBan;
+    if (LuongCoBan < 0) {
+        throw std::runtime_error("Luong co ban phai lon hon hoac bang 0");
+    }
 }
 void NhanVien::Xuat()
 {
     cout << "MSNV: " << MSNV << " | ";
     cout << "Ho Ten: " << HoTen << endl;
-    cout << "Luong Co Ban: " << LuongCoBan << " | ";
+    cout << "Luong Co Ban: " << fixed << setprecision(0) << LuongCoBan << " | ";
 }

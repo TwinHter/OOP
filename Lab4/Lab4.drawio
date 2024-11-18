@@ -1,0 +1,107 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.8 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.8" pages="3">
+  <diagram name="Page-1" id="mpL8FB8cR5MUSjM7tRnr">
+    <mxGraphModel dx="730" dy="609" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="7dm4zi10hJoL8BKpoG89-9" value="&lt;table border=&quot;1&quot; width=&quot;100%&quot; height=&quot;100%&quot; cellpadding=&quot;4&quot; style=&quot;width:100%;height:100%;border-collapse:collapse;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;th align=&quot;center&quot;&gt;NhanVien&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;- MSNV: string&lt;br&gt;- HoTen: string&lt;br&gt;- LuongCoBan:double&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;- NhanVien()&lt;br&gt;- NhanVien(string, string, double)&lt;br&gt;- virtual Nhap(): void&lt;br&gt;- virtual Xuat(): void&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;overflow=fill;" vertex="1" parent="1">
+          <mxGeometry x="200" y="30" width="270" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="7dm4zi10hJoL8BKpoG89-10" value="&lt;table border=&quot;1&quot; width=&quot;100%&quot; height=&quot;100%&quot; cellpadding=&quot;4&quot; style=&quot;width:100%;height:100%;border-collapse:collapse;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;th align=&quot;center&quot;&gt;KySu&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;SoGioLamThem: int&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;- KySu()&lt;br&gt;- KySu(string, string, string, int)&lt;br&gt;- TienThuong(): double&lt;br&gt;- overide Nhap(): void&lt;br&gt;- overide Xuat(): void&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;overflow=fill;" vertex="1" parent="1">
+          <mxGeometry x="119" y="330" width="180" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="7dm4zi10hJoL8BKpoG89-11" value="&lt;table border=&quot;1&quot; width=&quot;100%&quot; height=&quot;100%&quot; cellpadding=&quot;4&quot; style=&quot;width:100%;height:100%;border-collapse:collapse;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;th align=&quot;center&quot;&gt;QuanLy&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;TyLeThuong: double&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;- QuanLy()&lt;br&gt;- QuanLy(string, string, string, double)&lt;br&gt;- TIenThuong(): double&lt;br&gt;- overide Nhap(): void&lt;br&gt;- overide Xuat(): void&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;overflow=fill;" vertex="1" parent="1">
+          <mxGeometry x="382" y="330" width="220" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="7dm4zi10hJoL8BKpoG89-14" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.7;exitY=-0.006;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="7dm4zi10hJoL8BKpoG89-10">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="190" y="270" as="sourcePoint" />
+            <mxPoint x="314" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7dm4zi10hJoL8BKpoG89-15" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.386;exitY=-0.011;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="7dm4zi10hJoL8BKpoG89-11">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="343" y="329" as="sourcePoint" />
+            <mxPoint x="412" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="3Fmmj9klmPGNUNMcsS0k" name="Page-2">
+    <mxGraphModel dx="1215" dy="731" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="kyk5K_KCRgAxumvu7Xfl-1" value="&lt;table border=&quot;1&quot; width=&quot;100%&quot; height=&quot;100%&quot; cellpadding=&quot;4&quot; style=&quot;width:100%;height:100%;border-collapse:collapse;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;th align=&quot;center&quot;&gt;Room&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;- SoDem: int&lt;br&gt;- HeSo: int&lt;br&gt;- DoanhThuPhong: long long&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;- Room()&lt;br&gt;- Room(int)&lt;br&gt;- virtual Xuat(): void&lt;br&gt;- GetDoanhThuPhong(): void&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;overflow=fill;" vertex="1" parent="1">
+          <mxGeometry x="289" y="16" width="270" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="urycVY9IUkMwv30V3uX9-1" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.7;exitY=-0.006;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.005;entryY=0.961;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="kyk5K_KCRgAxumvu7Xfl-1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="658" y="259" as="sourcePoint" />
+            <mxPoint x="727" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="urycVY9IUkMwv30V3uX9-2" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.7;exitY=-0.006;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="kyk5K_KCRgAxumvu7Xfl-1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="185" y="259" as="sourcePoint" />
+            <mxPoint x="254" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="urycVY9IUkMwv30V3uX9-3" value="&lt;table border=&quot;1&quot; width=&quot;100%&quot; height=&quot;100%&quot; cellpadding=&quot;4&quot; style=&quot;width:100%;height:100%;border-collapse:collapse;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;th align=&quot;center&quot;&gt;Business&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;- Business()&lt;br&gt;- Business(int)&lt;br&gt;- TinhTien(): long long&lt;br&gt;- override Xuat(): void&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;overflow=fill;" vertex="1" parent="1">
+          <mxGeometry x="19" y="259" width="270" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="urycVY9IUkMwv30V3uX9-4" value="&lt;table border=&quot;1&quot; width=&quot;100%&quot; height=&quot;100%&quot; cellpadding=&quot;4&quot; style=&quot;width:100%;height:100%;border-collapse:collapse;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;th align=&quot;center&quot;&gt;Deluxe&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;- PhiDichVu: int&lt;br&gt;- PhiPhucVu: int&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;- Deluxe()&lt;br&gt;- Deluxe(int, int, int)&lt;br&gt;- TinhTien(): long long&lt;br&gt;- override Xuat(): void&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;overflow=fill;" vertex="1" parent="1">
+          <mxGeometry x="298" y="261" width="270" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="urycVY9IUkMwv30V3uX9-5" value="&lt;table border=&quot;1&quot; width=&quot;100%&quot; height=&quot;100%&quot; cellpadding=&quot;4&quot; style=&quot;width:100%;height:100%;border-collapse:collapse;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;th align=&quot;center&quot;&gt;Premium&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;- PhiDichVu: int&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;- Premium()&lt;br&gt;- Premium(int, int)&lt;br&gt;- TinhTien(): long long&lt;br&gt;- override Xuat(): void&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;overflow=fill;" vertex="1" parent="1">
+          <mxGeometry x="577" y="261" width="270" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="urycVY9IUkMwv30V3uX9-6" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.528;exitY=-0.014;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.005;entryY=0.961;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="urycVY9IUkMwv30V3uX9-4">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="555" y="266" as="sourcePoint" />
+            <mxPoint x="457" y="196" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="gtIPrIobqnsYlYTz0Odg" name="Page-3">
+    <mxGraphModel dx="1215" dy="731" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c1_FGsXA-VxBeBHKXwVR-1" value="&lt;table border=&quot;1&quot; width=&quot;100%&quot; height=&quot;100%&quot; cellpadding=&quot;4&quot; style=&quot;width:100%;height:100%;border-collapse:collapse;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;th align=&quot;center&quot;&gt;GiaSuc&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;- SoLuong: int&lt;br&gt;- SoLitSua: int&lt;br&gt;- SoCon: int&lt;br&gt;- TiengKeu: string&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;- GiaSuc()&lt;br&gt;- GiaSuc(int)&lt;br&gt;- SoConSau1Lua(): int&lt;br&gt;- SoLitSuaSau1Lua(): int&lt;br&gt;- virtual Xuat(): void&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;overflow=fill;" vertex="1" parent="1">
+          <mxGeometry x="303" y="35" width="270" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="c1_FGsXA-VxBeBHKXwVR-2" value="&lt;table border=&quot;1&quot; width=&quot;100%&quot; height=&quot;100%&quot; cellpadding=&quot;4&quot; style=&quot;width:100%;height:100%;border-collapse:collapse;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;th align=&quot;center&quot;&gt;Bo&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;- Bo()&lt;br&gt;- Bo(int)&lt;br&gt;- Keu()&lt;br&gt;- overide Xuat(): void&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;overflow=fill;" vertex="1" parent="1">
+          <mxGeometry x="105" y="300" width="185" height="147" as="geometry" />
+        </mxCell>
+        <mxCell id="c1_FGsXA-VxBeBHKXwVR-3" value="&lt;table border=&quot;1&quot; width=&quot;100%&quot; height=&quot;100%&quot; cellpadding=&quot;4&quot; style=&quot;width:100%;height:100%;border-collapse:collapse;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;th align=&quot;center&quot;&gt;De&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;- Bo()&lt;br&gt;- Bo(int)&lt;br&gt;- Keu()&lt;br&gt;- overide Xuat(): void&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;overflow=fill;" vertex="1" parent="1">
+          <mxGeometry x="328" y="301" width="210" height="147" as="geometry" />
+        </mxCell>
+        <mxCell id="c1_FGsXA-VxBeBHKXwVR-4" value="&lt;table border=&quot;1&quot; width=&quot;100%&quot; height=&quot;100%&quot; cellpadding=&quot;4&quot; style=&quot;width:100%;height:100%;border-collapse:collapse;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;th align=&quot;center&quot;&gt;Cuu&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;- Bo()&lt;br&gt;- Bo(int)&lt;br&gt;- Keu()&lt;br&gt;- overide Xuat(): void&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;overflow=fill;" vertex="1" parent="1">
+          <mxGeometry x="567" y="303" width="211" height="144" as="geometry" />
+        </mxCell>
+        <mxCell id="c1_FGsXA-VxBeBHKXwVR-5" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.616;exitY=-0.028;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="c1_FGsXA-VxBeBHKXwVR-4" target="c1_FGsXA-VxBeBHKXwVR-1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="602" y="215" as="sourcePoint" />
+            <mxPoint x="762" y="215" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c1_FGsXA-VxBeBHKXwVR-7" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.6;exitY=0.014;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="c1_FGsXA-VxBeBHKXwVR-3">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="386.00000000000006" y="287.942" as="sourcePoint" />
+            <mxPoint x="454.09" y="215" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c1_FGsXA-VxBeBHKXwVR-8" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;exitX=0.395;exitY=-0.007;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="c1_FGsXA-VxBeBHKXwVR-2" target="c1_FGsXA-VxBeBHKXwVR-1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="149" y="257" as="sourcePoint" />
+            <mxPoint x="309" y="257" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

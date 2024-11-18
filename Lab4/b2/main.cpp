@@ -20,11 +20,11 @@ int main() {
     vector<Room*> rooms;
 
     // Thêm các phòng vào danh sách
-    rooms.push_back(new Deluxe(3, 100000, 200000));  // 3 đêm, phí dịch vụ 100k, phí phục vụ 200k
-    rooms.push_back(new Premium(2, 50000));          // 2 đêm, phí dịch vụ 50k
-    rooms.push_back(new Business(5));                // 5 đêm
-    rooms.push_back(new Deluxe(4, 150000, 250000));  // 4 đêm, phí dịch vụ 150k, phí phục vụ 250k
-    rooms.push_back(new Premium(3, 75000));          // 3 đêm, phí dịch vụ 75k
+    rooms.push_back(new Deluxe(3, -100000, 200000));  
+    rooms.push_back(new Premium(-120, 50000));        
+    rooms.push_back(new Business(5));                
+    rooms.push_back(new Deluxe(4, 150000, -250000));  
+    rooms.push_back(new Premium(-3, 75000));          
 
     // Xuất thông tin các phòng
     for (int i = 0; i < rooms.size(); i++) {
@@ -32,8 +32,13 @@ int main() {
         cout << endl;
     }
     // Tìm phòng có doanh thu cao nhất và xuất thông tin
+    cout << "Phong co doanh thu cao nhat: " << endl;
     Room* bestRoom = DoanhThuCaoNhat(rooms);
-    bestRoom->Xuat();
+    if(bestRoom->GetDoanhThuPhong() < 0) {
+        cout << "Khong co phong hop le" << endl;
+    }
+    else
+        bestRoom->Xuat();
 
     return 0;
 }

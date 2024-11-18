@@ -5,18 +5,23 @@ Premium::Premium() {
     HeSo = 0;
     PhiDichVu = 0;
 }
-Premium::Premium(int SoDem, int PhiDichVu) {
-    this->SoDem = SoDem;
+Premium::Premium(int SoDem, int PhiDichVu): Room(SoDem) {
     HeSo = 500000;
     this->PhiDichVu = PhiDichVu;
+    if(PhiDichVu < 0) {
+        throw new std::invalid_argument("Phi dich vu phai lon hon 0");
+    }
+    TinhTien();
 }
 long long Premium::TinhTien() {
     DoanhThuPhong = SoDem * HeSo + PhiDichVu;
+    if(PhiDichVu < 0 || SoDem < 0) {
+        DoanhThuPhong = -1;
+    }
     return DoanhThuPhong;
 }
 void Premium::Xuat() {
     std::cout << "Thong tin phong Premium" << std::endl;
-    std::cout << "So dem: " << SoDem << " | " << "He so: " << HeSo << std::endl;
     std::cout << "Phi dich vu: " << PhiDichVu << std::endl;
-    std::cout << "Doanh thu phong: " << DoanhThuPhong << std::endl;
+    Room::Xuat();
 }
